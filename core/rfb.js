@@ -2105,7 +2105,10 @@ export default class RFB extends EventTargetMixin {
         RFB.messages.fbUpdateRequest(this._sock, false, 0, 0, this._fbWidth, this._fbHeight);
 
         this._updateConnectionState('connected');
-        return true;
+
+	Log.Info("entry point for paddle");
+	paddle_start();
+	return true;
     }
 
     _sendEncodings() {
